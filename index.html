@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MemeMory - Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: #555;
+            transition: color 0.2s;
+        }
+        .icon-btn:hover {
+            color: #000;
+        }
+        .nav-link {
+            text-decoration: none;
+            font-size: 15px;
+            color: #444;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 4px;
+        }
+        .nav-link.active, .nav-link:hover {
+            background-color: #eee;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,27 +40,29 @@
             
             <!-- Header Bar -->
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 20px;">
-                <div style="display: flex; align-items: center; gap: 4px;">
+                <!-- Logo Only -->
+                <div style="display: flex; align-items: center;">
                     <img src="images/logo.png" alt="Logo" style="height: 24px; width: auto;">
-                    <span style="font-weight: bold; font-size: 14px; color: #6c5ce7;">MemeMory</span>
                 </div>
-                <div style="flex: 1; position: relative; margin: 0 5px;">
-                    <input type="text" placeholder="🔍 Search" style="width: 100%; padding: 6px 12px; border-radius: 15px; border: 1px solid #555; font-size: 12px; outline: none;">
+                <!-- Search Bar -->
+                <div style="flex: 1; position: relative; margin: 0 8px;">
+                    <input type="text" placeholder="Search..." style="width: 100%; padding: 6px 12px; border-radius: 15px; border: 1px solid #555; font-size: 12px; outline: none;">
                 </div>
-                <a href="landing.html" style="text-decoration: none; font-size: 18px; color: #333;" title="Logout">🚪</a>
+                <!-- Logout Icon -->
+                <a href="landing.html" style="text-decoration: none; font-size: 16px; color: #333;" title="Logout">&#128682;</a>
             </div>
 
             <!-- Welcome Title -->
-            <h2 style="font-size: 26px; font-weight: normal; margin-bottom: 20px;">Welcome</h2>
+            <h2 style="font-size: 26px; font-weight: normal; margin-bottom: 20px; color: #000;">Welcome</h2>
 
             <!-- Meme Card 1 (Calculus1) -->
-            <div style="border: 1.5px solid #333; border-radius: 10px; padding: 10px; margin-bottom: 20px; background-color: #fff;">
+            <div style="border: 1.5px solid #333; border-radius: 10px; padding: 12px; margin-bottom: 15px; background-color: #fff;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
                     <span style="font-size: 15px; font-weight: 500;">Calculus1 <small style="font-size: 11px; color: #666;">(by you)</small></span>
-                    <div style="display: flex; gap: 10px; font-size: 14px;">
-                        <span style="cursor: pointer;" title="Edit">✏️</span>
-                        <span style="cursor: pointer;" title="Favorite">❤️</span>
-                        <span style="cursor: pointer;" title="Report">🚩</span>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="icon-btn" title="Edit">[Edit]</button>
+                        <button class="icon-btn" title="Favorite">[Like]</button>
+                        <button class="icon-btn" title="Report">[Flag]</button>
                     </div>
                 </div>
                 <!-- Image Display Area -->
@@ -45,12 +72,12 @@
             </div>
 
             <!-- Meme Card 2 (Operating System) -->
-            <div style="border: 1.5px solid #333; border-radius: 10px; padding: 10px; margin-bottom: 20px; background-color: #fff;">
+            <div style="border: 1.5px solid #333; border-radius: 10px; padding: 12px; margin-bottom: 15px; background-color: #fff;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
                     <span style="font-size: 15px; font-weight: 500;">operating system</span>
-                    <div style="display: flex; gap: 10px; font-size: 14px;">
-                        <span style="cursor: pointer;" title="Favorite">❤️</span>
-                        <span style="cursor: pointer;" title="Report">🚩</span>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="icon-btn" title="Favorite">[Like]</button>
+                        <button class="icon-btn" title="Report">[Flag]</button>
                     </div>
                 </div>
                 <!-- Image Display Area -->
@@ -62,10 +89,10 @@
         </div>
 
         <!-- Bottom Navigation Bar -->
-        <div class="bottom-navbar">
-            <a href="index.html" style="font-weight: bold;">🏠</a>
-            <a href="upload.html">➕</a>
-            <a href="favorites.html">❤️</a>
+        <div class="bottom-navbar" style="border-top: 1px solid #ddd; padding-top: 8px; display: flex; justify-content: space-around; width: 100%;">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="upload.html" class="nav-link">Create</a>
+            <a href="favorites.html" class="nav-link">Favorites</a>
         </div>
 
     </div>
