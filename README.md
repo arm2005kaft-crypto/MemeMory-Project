@@ -17,7 +17,7 @@ University students often struggle to recall complex academic concepts while was
 - **Database & Storage:** Firebase Firestore (Document-oriented NoSQL database) using a referencing approach to manage STUDENT, MEME_POST, and REPORT collections efficiently.
 - **Frontend / Backend:** Web-based responsive interface accessible across modern browsers (mobile, tablet, desktop).
 
-## Scrum Team (Section: 76361)[cite: 2]
+## Scrum Team (Section: 76361)
 - **Product Owner:** Layan Alserhani
 - **Scrum Master / Supervisor:** Dr. Rana Alkadi
 - **Developers:**
@@ -27,4 +27,4 @@ University students often struggle to recall complex academic concepts while was
   - Aryam Almazhari
   - Dalia Almutairi
 
-King Saud University - College of Computer and Information Sciences - Department of Information Technology (IT 320 Course Project)[cite: 1, 2]
+King Saud University - College of Computer and Information Sciences - Department of Information Technology (IT 320 Course Project)
