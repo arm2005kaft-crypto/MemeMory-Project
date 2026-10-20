@@ -13,8 +13,8 @@ University students often struggle to recall complex academic concepts while was
 - **Content Reporting:** Report posts that are unrelated to academic subjects to maintain a clean educational environment.
 
 ## System Architecture & Tech Stack
-- **Architecture:** Three-tier client-server architecture (Presentation Layer, Application/Business Logic Layer, Data Layer).
-- **Database & Storage:** Firebase Firestore (Document-oriented NoSQL database) using a referencing approach to manage STUDENT, MEME_POST, and REPORT collections efficiently.
+- **Frontend:** HTML, CSS, JavaScript
+- **Database:** Firebase Firestore
 - **Frontend / Backend:** Web-based responsive interface accessible across modern browsers (mobile, tablet, desktop).
 
 ## Scrum Team (Section: 76361)
