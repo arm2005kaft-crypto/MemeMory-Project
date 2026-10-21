@@ -7,21 +7,29 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <div class="app-container">
+    <div class="app-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 90vh; max-width: 400px; margin: 0 auto; padding: 20px; text-align: center;">
         
-        <!-- Logo Image -->
-        <div class="logo-container">
-            <img src="images/logo.png" alt="MemeMory Logo" style="max-width: 220px; height: auto;">
+        <!-- Logo -->
+        <div style="margin-bottom: 40px;">
+            <img src="images/logo.png" alt="MemeMory Logo" style="height: 55px; width: auto; display: block; margin: 0 auto 20px auto;">
+            <p style="font-size: 14px; color: #666; line-height: 1.5; margin: 0;">
+                Your centralized academic platform for course-related memes and smart revision.
+            </p>
         </div>
 
-        <!-- Buttons -->
-        <div class="actions-container">
-            <a href="login.html" class="btn-blue">login</a>
-            <a href="register.html" class="btn-blue">Register</a>
+        <!-- Action Buttons (Matched Blue Color) -->
+        <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+            <!-- Log In Button -->
+            <a href="login.html" style="text-decoration: none; padding: 12px; background-color: #007bff; color: #fff; border-radius: 6px; font-size: 14px; font-weight: 600; display: block; text-align: center;">
+                Log In
+            </a>
+
+            <!-- Register Button -->
+            <a href="register.html" style="text-decoration: none; padding: 12px; background-color: #fff; color: #007bff; border: 1.5px solid #007bff; border-radius: 6px; font-size: 14px; font-weight: 600; display: block; text-align: center;">
+                Register
+            </a>
         </div>
 
     </div>
-
 </body>
 </html>
