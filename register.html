@@ -7,36 +7,49 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <div class="app-container" style="justify-content: flex-start;">
+    <div class="app-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 90vh; max-width: 400px; margin: 0 auto; padding: 20px;">
         
-        <!-- Back Arrow -->
-        <div style="width: 100%; text-align: left;">
-            <a href="landing.html" class="back-arrow">&larr;</a>
+        <!-- Logo Only -->
+        <div style="margin-bottom: 30px; text-align: center;">
+            <a href="landing.html">
+                <img src="images/logo.png" alt="MemeMory Logo" style="height: 50px; width: auto; display: block; margin: 0 auto;">
+            </a>
         </div>
 
-        <!-- Header -->
-        <div style="width: 100%; margin-top: 15px; margin-bottom: 30px;">
-            <h2 style="font-size: 28px; color: #000; font-weight: normal; border-bottom: 2px solid #000; display: inline-block; padding-bottom: 5px;">Register</h2>
+        <!-- Register Form Container -->
+        <div style="width: 100%; background-color: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-sizing: border-box;">
+            <form action="login.html" method="GET" style="display: flex; flex-direction: column; gap: 15px;">
+                
+                <!-- Full Name Field -->
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label style="font-size: 13px; font-weight: 600; color: #333;">Full Name</label>
+                    <input type="text" name="fullname" placeholder="Enter your full name" required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none;">
+                </div>
+
+                <!-- Email Field -->
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label style="font-size: 13px; font-weight: 600; color: #333;">Email</label>
+                    <input type="email" name="email" placeholder="Enter your email" required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none;">
+                </div>
+
+                <!-- Password Field -->
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <label style="font-size: 13px; font-weight: 600; color: #333;">Password</label>
+                    <input type="password" name="password" placeholder="At least 8 characters" required minlength="8" style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none;">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" style="margin-top: 10px; padding: 11px; background-color: #007bff; color: #fff; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer;">
+                    Register
+                </button>
+            </form>
         </div>
 
-        <!-- Register Form -->
-        <form style="width: 100%; text-align: center;" onsubmit="return false;">
-            <input type="text" placeholder="Name" class="input-box" required>
-            <input type="email" placeholder="Email" class="input-box" required>
-            <input type="password" placeholder="Password" class="input-box" required>
-            <input type="password" placeholder="Confirm Password" class="input-box" required>
-
-            <p style="font-size: 13px; margin-bottom: 20px; color: #333;">
-                have an account? <a href="login.html" style="color: #000; font-weight: bold; text-decoration: underline;">login</a>
-            </p>
-
-            <div style="width: 70%; margin: 0 auto;">
-                <button type="submit" class="btn-blue">Creat Account</button>
-            </div>
-        </form>
+        <!-- Link to Login -->
+        <div style="margin-top: 20px; font-size: 13px; color: #555; text-align: center;">
+            Already have an account? <a href="login.html" style="color: #007bff; font-weight: 600; text-decoration: none;">Log In</a>
+        </div>
 
     </div>
-
 </body>
 </html>
