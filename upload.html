@@ -75,7 +75,7 @@
             const description = document.getElementById('memeDesc').value;
             const imageInput = document.getElementById('memeImage');
 
-            let imageSrc = "images/logo.png"; // صورة افتراضية كاحتياط
+            let imageSrc = "images/meme1.png"; // صورة افتراضية كاحتياط
 
             if (imageInput.files && imageInput.files[0]) {
                 const reader = new FileReader();
@@ -101,7 +101,7 @@
             savedMemes.unshift(newMeme);
             localStorage.setItem('userMemes', JSON.stringify(savedMemes));
 
-            // التوجيه المباشر لصفحة الهوم
+            // التوجيه المباشر لصفحة الهوم بعد اكتمال الحفظ
             window.location.href = "home.html";
         }
     </script>
