@@ -18,19 +18,19 @@
 
         <!-- Login Form Container -->
         <div style="width: 100%; background-color: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-sizing: border-box;">
-            <!-- Form points correctly to home.html on login -->
-            <form action="home.html" method="GET" style="display: flex; flex-direction: column; gap: 15px;">
+            <!-- Form uses JavaScript handler to validate login -->
+            <form id="loginForm" style="display: flex; flex-direction: column; gap: 15px;">
                 
                 <!-- Email Field -->
                 <div style="display: flex; flex-direction: column; gap: 5px;">
                     <label style="font-size: 13px; font-weight: 600; color: #333;">Email</label>
-                    <input type="email" name="email" placeholder="Enter your email" required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none;">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none;">
                 </div>
 
                 <!-- Password Field -->
                 <div style="display: flex; flex-direction: column; gap: 5px;">
                     <label style="font-size: 13px; font-weight: 600; color: #333;">Password</label>
-                    <input type="password" name="password" placeholder="Enter password" required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none;">
+                    <input type="password" id="password" name="password" placeholder="Enter password" required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; outline: none;">
                     
                     <!-- Forgot Password Under Password Input -->
                     <div style="text-align: right; margin-top: 2px;">
@@ -51,5 +51,27 @@
         </div>
 
     </div>
+
+    <!-- JavaScript to Validate Login from LocalStorage -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع الإرسال الافتراضي
+
+            const emailInput = document.getElementById('email').value;
+            const passwordInput = document.getElementById('password').value;
+
+            // جلب بيانات المستخدم المخزنة مسبقاً من صفحة التسجيل
+            const savedUser = JSON.parse(localStorage.getItem('registeredUser'));
+
+            // التحقق من صحة البيانات (أو السماح بحساب تجريبي افتراضي إن لم تقم بالتسجيل بعد)
+            if (savedUser && savedUser.email === emailInput && savedUser.password === passwordInput) {
+                // إذا كانت البيانات صحيحة، انتقل إلى صفحة الهوم
+                window.location.href = "home.html";
+            } else {
+                // إظهار رسالة خطأ (Error) إذا كانت البيانات خاطئة
+                alert("Error: Incorrect email or password. Please try again or register first!");
+            }
+        });
+    </script>
 </body>
 </html>
