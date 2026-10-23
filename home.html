@@ -81,9 +81,9 @@
         </div>
     </div>
 
-    <!-- JavaScript to Load and Display LocalStorage Memes with Edit Button -->
+    <!-- JavaScript to Load and Display LocalStorage Memes Instantly -->
     <script>
-        window.onload = function() {
+        document.addEventListener("DOMContentLoaded", function() {
             const container = document.getElementById('dynamicMemesContainer');
             let savedMemes = JSON.parse(localStorage.getItem('userMemes')) || [];
 
@@ -113,7 +113,7 @@
                     container.appendChild(card);
                 });
             }
-        };
+        });
     </script>
 </body>
 </html>
